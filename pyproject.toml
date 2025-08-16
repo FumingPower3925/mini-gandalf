@@ -1,0 +1,22 @@
+[project]
+name = "mini-gandalf"
+version = "1.0.0"
+description = "Simple AI to defend AI"
+authors = [{ name = "Your Name", email = "your@email.com" }]
+requires-python = ">=3.13.6"
+dependencies = [
+    "gradio",
+    "openai",
+    "python-dotenv",
+    "toml",
+    "pyyaml",
+    "transformers",
+    "transformers[torch]",
+    "torch",
+    "datasets",
+    "scikit-learn",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
