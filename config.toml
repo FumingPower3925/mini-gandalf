@@ -1,0 +1,6 @@
+[app]
+title = "mini-gandalf"
+description = "A simple AI to defend AI"
+
+[llm]
+model = "gpt-5"

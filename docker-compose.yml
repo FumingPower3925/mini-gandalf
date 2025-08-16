@@ -1,0 +1,26 @@
+services:
+  web:
+    build: .
+    ports:
+      - "7860:7860"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    command: bash -c "mkdir -p /app/models && python -m app.app"
+
+  train-input-classifier:
+    build: .
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    command: python scripts/train_input_classifier.py
+
+  train-output-classifier:
+    build: .
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    command: python scripts/train_output_classifier.py
